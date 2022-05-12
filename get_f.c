@@ -25,7 +25,6 @@ void get_f(stack_t **list, char *buffer, unsigned int line)
 
 	token = strtok(buffer, " \n");
 	number = strtok(NULL, " \n");
-	free_pointer(buffer);
 	buffer = NULL;
 
 	for (i = 0; ops[i].opcode != NULL && token != NULL; i++)
