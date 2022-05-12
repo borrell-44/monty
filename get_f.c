@@ -46,6 +46,6 @@ void get_f(stack_t **list, char *buffer, unsigned int line)
 	fclose(file);
 	free_list(list);
 	free_pointer(buffer);
-	opcode_error(token, line);
+	file_error(list);
 }
 
