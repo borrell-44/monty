@@ -17,6 +17,7 @@ void pint(stack_t **list, unsigned int line)
 	else
 	{
 		fprintf(stderr, "L%d: can't print, stack empty\n", line);
+		fclose(file);
 		free_list(list);
 		exit(EXIT_FAILURE);
 	}

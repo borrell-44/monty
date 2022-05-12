@@ -12,9 +12,8 @@
 void get_f(stack_t **list, char *buffer, unsigned int line)
 {
 	int i;
-	char *token;
+	char *token, *number;
 	instruction_t ops[] = {
-		{"push", push},
 		{"pall", pall},
 		{"pint", pint},
 		{"swap", swap},
@@ -24,19 +23,26 @@ void get_f(stack_t **list, char *buffer, unsigned int line)
 		{NULL, NULL}
 	};
 
-	number = NULL;
 	token = strtok(buffer, " \n");
+	number = strtok(NULL, " \n");
+	buffer = NULL;
 
 	for (i = 0; ops[i].opcode != NULL && token != NULL; i++)
 	{
+		if (strcmp("push", token) == 0)
+		{
+			push(number, list, line);
+			return;
+		}
+
 		if (strcmp(token, ops[i].opcode) == 0)
 		{
-			number = strtok(NULL, " \n");
 			ops[i].f(list, line);
 			return;
 		}
 	}
-
+	
+	fclose(file);
 	free_list(list);
 	file_error(token);
 }

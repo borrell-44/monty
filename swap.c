@@ -25,6 +25,7 @@ void swap(stack_t **list, unsigned int line)
 	}
 
 	fprintf(stderr, "L%d: can't swap, stack too short", line);
+	fclose(file);
 	free_list(list);
 	exit(EXIT_FAILURE);
 }

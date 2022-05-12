@@ -32,6 +32,7 @@ int main(int argc, char *argv[])
 	{
 		file_error(argv[1]);
 	}
+	file = f;
 
 	while (getline(&buffer, &len, f) != -1)
 	{
