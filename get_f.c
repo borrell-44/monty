@@ -12,7 +12,7 @@
 void get_f(stack_t **list, char *buffer, unsigned int line)
 {
 	int i;
-	char *token, *number, *condition, *copy = NULL;
+	char *token, *number, *condition;
 	instruction_t ops[] = {
 		{"pall", pall},
 		{"pint", pint},
@@ -22,8 +22,6 @@ void get_f(stack_t **list, char *buffer, unsigned int line)
 		{"nop", nop},
 		{NULL, NULL}
 	};
-
-	copy = strtok(buffer, "");
 
 	token = strtok(buffer, " \n");
 	number = strtok(NULL, " \n");
@@ -48,6 +46,6 @@ void get_f(stack_t **list, char *buffer, unsigned int line)
 	fclose(file);
 	free_list(list);
 	free_pointer(buffer);
-	opcode_error(copy, line);
+	opcode_error(token, line);
 }
 
