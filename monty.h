@@ -51,11 +51,13 @@ void push(char *number, stack_t **list, unsigned int line);
 void pall(stack_t **list, unsigned int line);
 void pint(stack_t **list, unsigned int line);
 void swap(stack_t **list, unsigned int line);
+void _div(stack_t **list, unsigned int line);
 void add(stack_t **list, unsigned int line);
 void pop(stack_t **list, unsigned int line);
 void nop(stack_t **list, unsigned int line);
 void sub(stack_t **list, unsigned int line);
-void _div(stack_t **list, unsigned int line);
+void mul(stack_t **list, unsigned int line);
+void mod(stack_t **list, unsigned int line);
 
 #endif
 

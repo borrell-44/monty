@@ -17,11 +17,13 @@ void get_f(stack_t **list, char *buffer, unsigned int line)
 		{"pall", pall},
 		{"pint", pint},
 		{"swap", swap},
+		{"div", _div},
 		{"pop", pop},
 		{"add", add},
 		{"nop", nop},
 		{"sub", sub},
-		{"div", _div},
+		{"mul", mul},
+		{"mod", mod},
 		{NULL, NULL}
 	};
 
