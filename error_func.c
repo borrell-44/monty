@@ -35,3 +35,17 @@ void malloc_error(void)
 	exit(EXIT_FAILURE);
 }
 
+/**
+ * opcode_error - prints error message for invalid instructions
+ * @opcode: the invalid insttruction
+ * @line: the current line number
+ *
+ * Return: nothing
+*/
+void opcode_error(char *opcode, unsigned int line)
+{
+	fprintf(stderr, "L%d: unknown instruction %s", line, opcode);
+	free_pointer(opcode);
+	exit(EXIT_FAILURE);
+}
+
