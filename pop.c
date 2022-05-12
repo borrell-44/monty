@@ -29,7 +29,9 @@ void pop(stack_t **list, unsigned int line)
 	}
 	else
 	{
-		pop_error(line);
+		fprintf(stderr, "L%d: can't pop an empty stack\n", line);
+		free_list(list);
+		exit(EXIT_FAILURE);
 	}
 }
 

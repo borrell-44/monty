@@ -20,6 +20,7 @@ void push(stack_t **list, unsigned int line)
 	new = malloc(sizeof(stack_t));
 	if (new == NULL)
 	{
+		free_list(list);
 		malloc_error();
 	}
 	new->n = atoi(number);

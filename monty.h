@@ -43,8 +43,6 @@ void malloc_error();
 void file_error(char *file);
 void free_pointer(char *ptr);
 void free_list(stack_t **stack);
-void pop_error(unsigned int line);
-void pint_error(unsigned int line);
 void integer_error(unsigned int line);
 void get_f(stack_t **list, char *buffer, unsigned int line);
 void push(stack_t **list, unsigned int line);

@@ -36,7 +36,8 @@ void get_f(stack_t **list, char *buffer, unsigned int line)
 			return;
 		}
 	}
-
+	
+	free_list(list);
 	file_error(token);
 }
 
