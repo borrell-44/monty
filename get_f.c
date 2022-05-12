@@ -20,6 +20,8 @@ void get_f(stack_t **list, char *buffer, unsigned int line)
 		{"pop", pop},
 		{"add", add},
 		{"nop", nop},
+		{"sub", sub},
+		{"div", _div},
 		{NULL, NULL}
 	};
 

@@ -54,6 +54,8 @@ void swap(stack_t **list, unsigned int line);
 void add(stack_t **list, unsigned int line);
 void pop(stack_t **list, unsigned int line);
 void nop(stack_t **list, unsigned int line);
+void sub(stack_t **list, unsigned int line);
+void _div(stack_t **list, unsigned int line);
 
 #endif
 
