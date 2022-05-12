@@ -2,9 +2,11 @@
 
 /**
 * get_f - get the function specified by parameter
-* @s: specifier given
+* @list: head of a double linked list
+* @buffer: a line of arguments
+* @line: the current line number
 *
-* Return: return pointer to function
+* Return: nothing
 */
 
 void get_f(stack_t **list, char *buffer, unsigned int line)
@@ -17,6 +19,8 @@ void get_f(stack_t **list, char *buffer, unsigned int line)
 		{"pint", pint},
 		{"pop", pop},
 		{"swap", swap},
+		{"add", add},
+		{"nop", nop},
 		{NULL, NULL}
 	};
 
