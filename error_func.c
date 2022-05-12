@@ -44,7 +44,7 @@ void malloc_error(void)
 */
 void opcode_error(char *opcode, unsigned int line)
 {
-	fprintf(stderr, "L%d: unknown instruction %s", line, opcode);
+	fprintf(stderr, "L%d: unknown instruction %s\n", line, opcode);
 	free_pointer(opcode);
 	exit(EXIT_FAILURE);
 }

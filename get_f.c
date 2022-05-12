@@ -26,7 +26,6 @@ void get_f(stack_t **list, char *buffer, unsigned int line)
 	token = strtok(buffer, " \n");
 	number = strtok(NULL, " \n");
 	condition = strtok(NULL, " \n");
-	buffer = NULL;
 
 	for (i = 0; ops[i].opcode != NULL && token != NULL; i++)
 	{
@@ -45,7 +44,6 @@ void get_f(stack_t **list, char *buffer, unsigned int line)
 
 	fclose(file);
 	free_list(list);
-	free_pointer(buffer);
-	file_error(list);
+	opcode_error(buffer, line);
 }
 
