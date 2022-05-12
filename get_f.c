@@ -17,8 +17,8 @@ void get_f(stack_t **list, char *buffer, unsigned int line)
 		{"push", push},
 		{"pall", pall},
 		{"pint", pint},
-		{"pop", pop},
 		{"swap", swap},
+		{"pop", pop},
 		{"add", add},
 		{"nop", nop},
 		{NULL, NULL}
@@ -36,7 +36,7 @@ void get_f(stack_t **list, char *buffer, unsigned int line)
 			return;
 		}
 	}
-	
+
 	free_list(list);
 	file_error(token);
 }

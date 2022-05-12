@@ -1,7 +1,8 @@
 #include "monty.h"
 
 /**
- * file_error - prints error when opening a file is unsuccesful 
+ * file_error - prints error when opening a file is unsuccesful
+ * @file: the file that cannot be open or it dosen't exist
  *
  * Return: nothing
 */
@@ -13,6 +14,7 @@ void file_error(char *file)
 
 /**
  * integer_error - prints error mesage for invalid syntax of integers
+ * @line: number of line where the error occured
  *
  * Return: nothing
 */
@@ -27,7 +29,7 @@ void integer_error(unsigned int line)
  *
  * Return: nothing
 */
-void malloc_error()
+void malloc_error(void)
 {
 	fprintf(stderr, "Error: malloc failed\n");
 	exit(EXIT_FAILURE);

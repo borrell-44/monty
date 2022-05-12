@@ -39,7 +39,8 @@ typedef struct instruction_s
         void (*f)(stack_t **stack, unsigned int line_number);
 } instruction_t;
 
-void malloc_error();
+void malloc_error(void);
+int check_num(char *str);
 void file_error(char *file);
 void free_pointer(char *ptr);
 void free_list(stack_t **stack);

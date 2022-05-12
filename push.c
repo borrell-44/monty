@@ -12,8 +12,9 @@ void push(stack_t **list, unsigned int line)
 {
 	stack_t *new;
 
-	if (number == NULL)
+	if (!(check_num(number)))
 	{
+		free_list(list);
 		integer_error(line);
 	}
 
