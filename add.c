@@ -1,5 +1,13 @@
 #include "monty.h"
 
+/**
+ * add - adds the top two elements of the list
+ * @list: head of a double linked list
+ * @line: the current line number
+ *
+ * Return: nothing
+*/
+
 void add(stack_t **list, unsigned int line)
 {
 	stack_t *tmp;

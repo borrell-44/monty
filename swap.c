@@ -1,5 +1,13 @@
 #include "monty.h"
 
+/**
+ * swap - swap the top two elements of the list
+ * @list: head of a double linked list
+ * @line: the current line number
+ *
+ * Return: nothing
+*/
+
 void swap(stack_t **list, unsigned int line)
 {
 	int first, second;

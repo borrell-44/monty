@@ -1,5 +1,13 @@
 #include "monty.h"
 
+/**
+ * push - pushes an element to the list
+ * @list: head of a double linked list
+ * @line: the current line number
+ *
+ * Return: nothing
+*/
+
 void push(stack_t **list, unsigned int line)
 {
 	stack_t *new;

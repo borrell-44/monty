@@ -1,5 +1,13 @@
 #include "monty.h"
 
+/**
+ * main - executes monty byte code files
+ * @argc: number of arguments given
+ * @argv: list of the given arguments
+ *
+ * Return: 0 if successfull
+*/
+
 int main(int argc, char *argv[])
 {
 	stack_t *list = NULL;
@@ -18,7 +26,7 @@ int main(int argc, char *argv[])
 	{
 		file_error(argv[1]);
 	}
-	
+
 	f = fopen(argv[1], "r");
 	if (f == NULL)
 	{
@@ -30,7 +38,7 @@ int main(int argc, char *argv[])
 		get_f(&list, buffer, line);
 		line++;
 	}
-	
+
 	free_pointer(buffer);
 	free_list(&list);
 	fclose(f);
