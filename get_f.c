@@ -14,6 +14,8 @@ void get_f(stack_t **list, char *buffer, unsigned int line)
 	int i;
 	char *token, *number, *condition;
 	instruction_t ops[] = {
+		{"pchar", pchar},
+		{"pstr", pstr},
 		{"pall", pall},
 		{"pint", pint},
 		{"swap", swap},

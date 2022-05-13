@@ -48,6 +48,8 @@ void integer_error(unsigned int line);
 void opcode_error(char *opcode, unsigned int line);
 void get_f(stack_t **list, char *buffer, unsigned int line);
 void push(char *number, stack_t **list, unsigned int line);
+void pchar(stack_t **list, unsigned int line);
+void pstr(stack_t **list, unsigned int line);
 void pall(stack_t **list, unsigned int line);
 void pint(stack_t **list, unsigned int line);
 void swap(stack_t **list, unsigned int line);
