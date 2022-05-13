@@ -1,7 +1,7 @@
 #include "monty.h"
 
 /**
- * add - adds the top two elements of the list
+ * _div - divides the second element by the top element
  * @list: head of a double linked list
  * @line: the current line number
  *
